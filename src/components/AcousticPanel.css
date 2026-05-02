@@ -1,0 +1,171 @@
+.acoustic-panel {
+  background: var(--dark-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.ap-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+.ap-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.ap-arrow {
+  color: var(--white-dim);
+  font-size: 14px;
+  transition: transform 0.3s ease;
+}
+
+.ap-arrow.expanded {
+  transform: rotate(90deg);
+}
+
+.ap-body {
+  display: grid;
+  gap: 20px;
+}
+
+.ap-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ap-badge {
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  background: var(--dark-3);
+  color: var(--white);
+  border: 1px solid var(--border-subtle);
+}
+
+.ap-badge span {
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.ap-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ap-chart-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--white-dim);
+}
+
+.ap-pause-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 48px;
+}
+
+.ap-pause-bar {
+  flex: 1;
+  background: linear-gradient(to top, var(--gold), var(--gold-light));
+  border-radius: 2px 2px 0 0;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.ap-pause-bar:hover {
+  opacity: 1;
+}
+
+.ap-f0-svg {
+  width: 100%;
+  height: 80px;
+}
+
+.ap-f0-path {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+}
+
+.ap-f0-area {
+  fill: rgba(201, 168, 76, 0.08);
+  stroke: none;
+}
+
+.ap-f0-grid {
+  stroke: var(--border-subtle);
+  stroke-width: 0.5;
+  stroke-dasharray: 2, 4;
+}
+
+.ap-formants {
+  display: flex;
+  gap: 12px;
+}
+
+.ap-formant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.ap-formant-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.4);
+}
+
+.ap-formant-label {
+  font-size: 10px;
+  color: var(--white-dim);
+}
+
+.ap-reg-gauge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ap-reg-track {
+  flex: 1;
+  height: 4px;
+  background: var(--dark-3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.ap-reg-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  border-radius: 2px;
+  transition: width 0.8s ease;
+}
+
+.ap-reg-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--gold-light);
+  font-variant-numeric: tabular-nums;
+  min-width: 36px;
+  text-align: right;
+}

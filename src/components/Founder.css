@@ -1,0 +1,92 @@
+.founder {
+  background: var(--black);
+}
+
+.founder-layout {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.founder-aside {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  position: sticky;
+  top: 100px;
+}
+
+.founder-emblem {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 80px;
+  font-weight: 300;
+  color: var(--gold);
+  opacity: 0.15;
+  line-height: 1;
+}
+
+.founder-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.timeline-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-left: 16px;
+  border-left: 1px solid var(--border);
+}
+
+.t-year {
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  color: var(--gold);
+  opacity: 0.8;
+}
+
+.t-note {
+  font-size: 12px;
+  color: var(--white-dim);
+}
+
+.founder-body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 640px;
+}
+
+.founder-p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 2vw, 21px);
+  font-weight: 300;
+  color: var(--white-dim);
+  line-height: 1.8;
+}
+
+.founder-p--highlight {
+  color: var(--white);
+  font-style: italic;
+}
+
+.founder-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-style: italic;
+  font-weight: 300;
+  color: var(--gold);
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .founder-layout { grid-template-columns: 1fr; gap: 40px; }
+  .founder-aside { position: static; flex-direction: row; align-items: center; gap: 32px; }
+  .founder-emblem { font-size: 56px; }
+}

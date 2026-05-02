@@ -1,0 +1,148 @@
+.emotion-rating {
+  background: var(--dark-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.er-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.er-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.er-subtitle {
+  font-size: 12px;
+  color: var(--white-dim);
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.er-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.er-slider-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.er-slider-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--white);
+}
+
+.er-slider-label span:last-child {
+  color: var(--gold-light);
+  font-weight: 600;
+  min-width: 16px;
+  text-align: right;
+}
+
+.er-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  background: var(--dark-3);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.er-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--black);
+  box-shadow: 0 0 8px rgba(201, 168, 76, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.er-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.er-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--black);
+  cursor: pointer;
+}
+
+.er-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.er-submit {
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: 1px solid var(--gold);
+  background: var(--gold-dim);
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.er-submit:hover {
+  background: var(--gold);
+  color: var(--black);
+}
+
+.er-thanks {
+  font-size: 13px;
+  color: var(--gold-light);
+  padding: 8px 0;
+}
+
+.er-stats {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.er-stats-title {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--white-dim);
+  margin-bottom: 12px;
+}
+
+.er-radar {
+  display: flex;
+  justify-content: center;
+}
+
+.er-radar-svg {
+  width: 160px;
+  height: 160px;
+}

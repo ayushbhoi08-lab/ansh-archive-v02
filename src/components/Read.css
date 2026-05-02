@@ -1,0 +1,120 @@
+.read {
+  background: var(--dark);
+}
+
+.read-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 0;
+  border: 1px solid var(--border);
+}
+
+.read-nav {
+  border-right: 1px solid var(--border);
+  padding: 8px 0;
+}
+
+.read-nav-btn {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-left: 2px solid transparent;
+  padding: 20px 24px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.read-nav-btn:hover {
+  background: rgba(201, 168, 76, 0.04);
+}
+
+.read-nav-btn.active {
+  border-left-color: var(--gold);
+  background: rgba(201, 168, 76, 0.06);
+}
+
+.nav-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 12px;
+  color: var(--gold);
+  opacity: 0.5;
+}
+
+.nav-chapter {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  color: var(--white-dim);
+  line-height: 1.4;
+}
+
+.read-nav-btn.active .nav-chapter {
+  color: var(--white);
+}
+
+.read-panel {
+  padding: 48px 52px;
+}
+
+.shlok-block {
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.shlok-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 400;
+  line-height: 1.8;
+  color: var(--white);
+  white-space: pre-line;
+}
+
+.shlok-section {
+  margin-bottom: 32px;
+}
+
+.field-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.shlok-transliteration {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  font-style: italic;
+  color: var(--white-dim);
+  white-space: pre-line;
+  line-height: 1.9;
+}
+
+.shlok-meaning {
+  font-size: 15px;
+  color: var(--white);
+  line-height: 1.85;
+}
+
+.shlok-context {
+  font-size: 14px;
+  color: var(--white-dim);
+  line-height: 1.85;
+}
+
+@media (max-width: 768px) {
+  .read-layout { grid-template-columns: 1fr; }
+  .read-nav { border-right: none; border-bottom: 1px solid var(--border); }
+  .read-nav-btn { border-left: none; border-bottom: 2px solid transparent; }
+  .read-nav-btn.active { border-bottom-color: var(--gold); border-left-color: transparent; }
+  .read-panel { padding: 32px 24px; }
+}

@@ -1,0 +1,199 @@
+.listen-page { background: var(--black); min-height: 100vh; padding-top: 100px; }
+
+.page-header { padding: 60px 0 40px; background: var(--black); }
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(44px, 7vw, 80px);
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+.page-desc { font-size: 14px; color: var(--white-dim); max-width: 560px; line-height: 1.8; }
+
+/* ── Now playing ── */
+.now-playing-wrap { background: var(--dark); padding: 60px 0; }
+
+.now-playing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+  border: 1px solid var(--border);
+  padding: 48px 52px;
+}
+
+.np-label {
+  font-size: 9px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.np-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 3vw, 34px);
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.np-ref {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  opacity: 0.55;
+  display: block;
+  margin-bottom: 24px;
+}
+
+.np-sanskrit {
+  font-family: 'Noto Serif Devanagari', 'Cormorant Garamond', serif;
+  font-size: clamp(16px, 2vw, 22px);
+  line-height: 2;
+  color: var(--white);
+  white-space: pre-line;
+  margin-bottom: 16px;
+}
+
+.np-translit {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--gold);
+  opacity: 0.6;
+  white-space: pre-line;
+  line-height: 1.9;
+}
+
+/* Right side */
+.np-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.np-waveform {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.np-bar {
+  flex-shrink: 0;
+  width: 2px;
+  background: rgba(201,168,76,0.18);
+  border-radius: 1px;
+  transition: background 0.3s;
+}
+
+.np-bar--active {
+  background: var(--gold) !important;
+  animation: npBarPulse 0.85s ease-in-out infinite alternate;
+}
+@keyframes npBarPulse {
+  from { transform: scaleY(0.2); opacity: 0.4; }
+  to   { transform: scaleY(1);   opacity: 1; }
+}
+
+.np-controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.np-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--white-dim);
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 18px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.np-btn:hover { border-color: var(--gold); color: var(--gold); }
+.np-btn--play.playing,
+.np-btn.speaking { background: var(--gold-dim); border-color: var(--gold); color: var(--gold); }
+.np-btn.bookmarked { color: var(--gold); border-color: var(--gold); }
+
+.np-timer {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: var(--gold);
+  opacity: 0.7;
+  font-variant-numeric: tabular-nums;
+}
+
+.np-no-recording {
+  padding: 40px 0;
+  text-align: center;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+}
+
+.np-no-recording p {
+  font-size: 14px;
+  color: var(--white-dim);
+}
+
+/* Gate section */
+.gate-section {
+  padding: 40px 0;
+  background: var(--black);
+}
+
+.unlock-banner {
+  background: var(--gold-dim);
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+  text-align: center;
+}
+
+.unlock-banner p {
+  font-size: 14px;
+  color: var(--gold-light);
+  margin: 0;
+}
+
+/* ── Playlist ── */
+.playlist-wrap { padding: 60px 0 80px; }
+
+.playlist-header { margin-bottom: 8px; }
+
+.playlist-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+
+.playlist { display: flex; flex-direction: column; }
+
+.playlist-item { cursor: pointer; }
+
+.playlist-item--active .shlok-row { background: rgba(201,168,76,0.06) !important; }
+.playlist-item--active .row-chapter { opacity: 1; }
+
+.playlist-empty {
+  font-size: 14px;
+  color: var(--white-dim);
+  opacity: 0.4;
+  padding: 32px 0;
+}
+
+@media (max-width: 768px) {
+  .now-playing { grid-template-columns: 1fr; padding: 32px 24px; gap: 32px; }
+  .np-waveform { height: 36px; }
+}

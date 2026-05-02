@@ -1,0 +1,20 @@
+{
+  "recordingId": "BG_2.19_North_Medium",
+  "features": {
+    "tempoBPM": 72,
+    "pauseArchitecture": [0.4, 0.3, 0.8, 0.3, 0.5, 0.4],
+    "accentDensity": 14,
+    "meterType": "anuṣṭubh",
+    "rhythmicRegularity": 0.89,
+    "f0Contour": [115, 118, 122, 120, 116, 119, 123, 117],
+    "formants": [720, 1180, 2450],
+    "mfccs": [[0.12, 0.18, 0.22, 0.28, 0.2], [0.14, 0.2, 0.16, 0.25, 0.22]]
+  },
+  "emotionProfile": {
+    "calm": 5.8,
+    "awe": 5.5,
+    "absorption": 6.1,
+    "tension": 3.2,
+    "sacredness": 6.8
+  }
+}

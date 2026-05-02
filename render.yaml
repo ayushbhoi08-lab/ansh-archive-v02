@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: ansh-archive
+    runtime: node
+    plan: free
+    buildCommand: npm install && cd server && npm install && cd .. && npm run build && cd server && node scripts/seed.js
+    startCommand: node server/server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: CORS_ORIGIN
+        value: "*"
+      - key: PORT
+        value: 3001

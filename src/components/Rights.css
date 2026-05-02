@@ -1,0 +1,93 @@
+.rights {
+  background: var(--black);
+}
+
+.rights-layout {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 64px;
+  align-items: start;
+}
+
+.rights-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 28px;
+}
+
+.rights-body {
+  font-size: 15px;
+  color: var(--white-dim);
+  line-height: 1.85;
+  margin-bottom: 40px;
+}
+
+.rights-rules {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.rule {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: var(--white-dim);
+  line-height: 1.7;
+}
+
+.rule-icon {
+  color: var(--gold);
+  opacity: 0.6;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.rights-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--border);
+}
+
+.rights-card {
+  background: var(--dark-2);
+  padding: 28px 30px;
+  transition: background 0.2s;
+}
+
+.rights-card:hover {
+  background: rgba(201, 168, 76, 0.05);
+}
+
+.card-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.card-value {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.card-note {
+  font-size: 12px;
+  color: var(--white-dim);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .rights-layout { grid-template-columns: 1fr; gap: 40px; }
+}

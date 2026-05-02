@@ -1,0 +1,20 @@
+{
+  "recordingId": "BG_2.14_Founder_Slow",
+  "features": {
+    "tempoBPM": 68,
+    "pauseArchitecture": [0.3, 0.5, 0.3, 1.2, 0.4, 0.6, 0.3],
+    "accentDensity": 12,
+    "meterType": "anuṣṭubh",
+    "rhythmicRegularity": 0.92,
+    "f0Contour": [120, 122, 118, 125, 121, 119, 123, 120, 124, 118],
+    "formants": [750, 1200, 2500],
+    "mfccs": [[0.1, 0.2, 0.15, 0.3, 0.25], [0.15, 0.22, 0.18, 0.28, 0.2]]
+  },
+  "emotionProfile": {
+    "calm": 6.2,
+    "awe": 4.1,
+    "absorption": 5.8,
+    "tension": 2.1,
+    "sacredness": 5.5
+  }
+}

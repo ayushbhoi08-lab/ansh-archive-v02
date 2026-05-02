@@ -1,0 +1,268 @@
+.gate-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  overflow-y: auto;
+}
+
+.gate-inline {
+  background: var(--dark);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 24px;
+}
+
+.gate-overlay.unlocked {
+  animation: gateFadeOut 0.8s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes gateFadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; visibility: hidden; }
+}
+
+.gate-content {
+  max-width: 720px;
+  width: 100%;
+  text-align: center;
+}
+
+.gate-eyebrow {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.gate-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 6vw, 64px);
+  font-weight: 300;
+  color: var(--white);
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+
+.gate-desc {
+  font-size: 14px;
+  color: var(--white-dim);
+  max-width: 480px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.gate-progress-text {
+  font-size: 12px;
+  color: var(--gold-light);
+  margin-bottom: 32px;
+  letter-spacing: 1px;
+}
+
+/* Mandala layout */
+.gate-mandala {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 0 auto 40px;
+}
+
+.gate-center-ring {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: var(--gold);
+}
+
+.gate-ring-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.gate-ring-track {
+  fill: none;
+  stroke: var(--border-subtle);
+  stroke-width: 1;
+}
+
+.gate-ring-progress {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease;
+  filter: drop-shadow(0 0 4px rgba(201,168,76,0.3));
+}
+
+.gate-node {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%);
+}
+
+.gate-node:hover {
+  border-color: var(--gold);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.gate-node--completed {
+  border-color: var(--gold);
+  background: rgba(201, 168, 76, 0.12);
+  box-shadow: 0 0 16px rgba(201, 168, 76, 0.2);
+}
+
+.gate-node--completed .gate-node-num {
+  color: var(--gold-light);
+}
+
+.gate-node-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  color: var(--white-dim);
+  transition: color 0.5s;
+}
+
+.gate-node-check {
+  color: var(--gold);
+}
+
+.gate-shlokas-list {
+  display: grid;
+  gap: 12px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.gate-shloka-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-subtle);
+  background: var(--dark-2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: left;
+}
+
+.gate-shloka-item:hover {
+  border-color: var(--border);
+  background: var(--dark-3);
+}
+
+.gate-shloka-item--completed {
+  border-color: rgba(201, 168, 76, 0.25);
+}
+
+.gate-shloka-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--white-dim);
+  flex-shrink: 0;
+}
+
+.gate-shloka-item--completed .gate-shloka-num {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+}
+
+.gate-shloka-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.gate-shloka-title {
+  font-size: 13px;
+  color: var(--white);
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gate-shloka-ref {
+  font-size: 11px;
+  color: var(--white-dim);
+}
+
+.gate-shloka-status {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--white-dim);
+  flex-shrink: 0;
+}
+
+.gate-shloka-item--completed .gate-shloka-status {
+  color: var(--gold);
+}
+
+.gate-unlock-msg {
+  margin-top: 32px;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--gold);
+  background: var(--gold-dim);
+}
+
+.gate-unlock-msg p {
+  font-size: 14px;
+  color: var(--gold-light);
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .gate-mandala {
+    width: 260px;
+    height: 260px;
+  }
+  .gate-center-ring {
+    width: 64px;
+    height: 64px;
+    font-size: 20px;
+  }
+  .gate-node {
+    width: 36px;
+    height: 36px;
+  }
+}
