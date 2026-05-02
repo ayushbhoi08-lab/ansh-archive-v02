@@ -3,7 +3,7 @@ services:
     name: ansh-archive
     runtime: node
     plan: free
-    buildCommand: npm install && npm run build && cd server && node scripts/seed.js
+    buildCommand: npm install && npm run build && node server/scripts/seed.js
     startCommand: node server/server.js
     envVars:
       - key: NODE_ENV
