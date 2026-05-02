@@ -11,7 +11,8 @@
     "start": "node server/server.js",
     "preview": "vite preview",
     "lint": "eslint .",
-    "seed": "cd server && node scripts/seed.js"
+    "seed": "cd server && node scripts/seed.js",
+    "postinstall": "cd server && npm install"
   },
   "dependencies": {
     "react": "^19.2.5",
